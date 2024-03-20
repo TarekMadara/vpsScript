@@ -1,4 +1,5 @@
 #sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+#export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 apt-get update && apt-get install -y gnupg
 touch /etc/apt/sources.list.d/debian.list
 echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/debian-buster.gpg] http://deb.debian.org/debian buster main' >> /etc/apt/sources.list.d/debian.list
